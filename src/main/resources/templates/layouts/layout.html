@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout">
+<head>
+<!-- ASSETS, METADATOS, ESTILOS Y SCRIPT -->
+<div th:include="/componentes/assets::assets"></div>
+
+<!-- INCLUSION DE FRAGMENT GENERICO QUE VA A CAMBIAR SEGUN A QUIEN SE HEREDE O ASIGNE EL LAYOUT -->
+<title th:include="this::titulo"></title>
+</head>
+<body>
+	<!-- BARRA DE MENU Y NAVEGACION -->
+	<div th:include="/componentes/navbar::navbar"></div>
+
+	<div class="container">
+	
+		<!-- FRAGMENT GENERICO PARA EL CONTENIDO -->
+		<div th:include="this::content"></div>
+
+		<!-- FOOTER O PIE DE PAGINA -->
+		<div th:include="/componentes/footer::footer"></div>
+	</div>
+
+</body>
+</html>

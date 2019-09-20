@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+#frmMain{
+	    border: 1px solid silver; 
+	    padding:1%;
+	    padding-right:2%;
+	    border-radius: 5px;
+	    background-color: white;
+	    color: black; 
+}

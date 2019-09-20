@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/css/style.css">
+<title>Insert title here</title>
+</head>
+<body class="container table table-hover">
+	<table class="table mt-5" style="color: black">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Edad</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- ESTRUCTURA REPETITIVA PARA RECORRER EL LISTADO QUE VIENE EN VARIABLE 'ITEMS' ESTA EN EL FOREACH -->
+			<tr th:each = "i:${items}">
+				<td th:text = "${i.id}"></td>
+				<td th:text = "${i.nombre}"></td>
+				<td th:text = "${i.direccion}"></td>
+				<td th:text = "${i.edad}"></td>
+			</tr>
+		</tbody>
+		<div class="mt-5">
+			<button type="submit" class="btn btn-outline-success col-1">Nuevo</button>
+		</div>
+	</table>
+</body>
+</html>
